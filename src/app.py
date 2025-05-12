@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
-from joblib import load
 import numpy as np
+import os
 
 app = Flask(__name__)
 
 # Cargar el modelo y el scaler
-modelo = load('models/modelo_final_knn.sav')
-scaler = load('models/scaler_knn.sav')
+modelo = os.path.join(os.getcwd(), 'models', 'modelo_final_knn.sav')
+scaler = os.path.join(os.getcwd(), 'models', 'scaler_knn.sav')
 
 @app.route('/')
 def index():
