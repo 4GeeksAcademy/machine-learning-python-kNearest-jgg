@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predicción de Vino</title>
+</head>
+<body>
+  <h1>Predice la calidad del vino 🍇</h1>
+  <form method="POST" action="/predict">
+    {% for i in range(1, 12) %}
+      <input type="text" name="feature{{i}}" placeholder="Feature {{i}}" required><br>
+    {% endfor %}
+    <button type="submit">Predecir</button>
+  </form>
+  {% if resultado %}
+    <h2>Resultado: {{ resultado }}</h2>
+  {% endif %}
+</body>
+</html>
