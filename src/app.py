@@ -5,11 +5,12 @@ import os
 app = Flask(__name__)
 
 # Cargar el modelo y el scaler
-scaler_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'scaler_knn.sav')
-modelo_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'modelo_final_knn.sav')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+scaler_path = os.path.join(BASE_DIR, '..', 'models', 'scaler_knn.sav')
+modelo_path = os.path.join(BASE_DIR, '..', 'models', 'modelo_final_knn.sav')
 
-modelo = load(modelo_path)
 scaler = load(scaler_path)
+modelo = load(modelo_path)
 
 @app.route('/')
 def index():
