@@ -10,6 +10,13 @@ base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 scaler_path = os.path.join(base_dir, 'models', 'scaler_knn.sav')
 modelo_path = os.path.join(base_dir, 'models', 'modelo_final_knn.sav')
 
+print("Base directory:", base_dir)
+print("Ruta scaler:", scaler_path)
+print("Ruta modelo:", modelo_path)
+
+print("¿Existe scaler_knn.sav?:", os.path.isfile(scaler_path))
+print("¿Existe modelo_final_knn.sav?:", os.path.isfile(modelo_path))
+
 scaler = load(scaler_path)
 modelo = load(modelo_path)
 
