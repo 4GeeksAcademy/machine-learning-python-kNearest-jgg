@@ -1,6 +1,4 @@
-# Data Science Project Boilerplate
-
-This boilerplate is designed to kickstart data science projects by providing a basic setup for database connections, data processing, and machine learning model development. It includes a structured folder organization for your datasets and a set of pre-defined Python packages necessary for most data science tasks.
+# Project deployed on Render with Flask: https://render-kind-wine.onrender.com
 
 ## Structure
 
