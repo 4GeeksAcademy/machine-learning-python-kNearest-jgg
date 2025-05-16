@@ -56,9 +56,14 @@
     <div class="container">
         <h1>Predicción de Calidad del Vino 🍷</h1>
         <form action="/predict" method="post">
+            {% set nombres = [
+                'acidez fija acidity', 'acidez volatil acidity', 'ácido cítrico', 'azúcar residual',
+                'cloruros', 'dióxido de azufre libre', 'dióxido de azufre total', 'densidad',
+                'pH', 'sulfatos', 'alcohol'
+            ] %}
             {% for i in range(1, 12) %}
-                <label for="feature{{ i }}">Característica {{ i }}</label>
-                <input type="number" name="feature{{ i }}" id="feature{{ i }}" step="any" required>
+                <label for="feature{{ i }}">{{ nombres[i-1] }}</label>
+                <input type="number" name="feature{{ i }}" id="feature{{ i }}" step="any" inputmode="decimal" required>
             {% endfor %}
             <button type="submit">Predecir</button>
         </form>
