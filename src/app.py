@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Cargar el modelo y el scaler
 base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-scaler_path = os.path.join(base_dir, 'models', 'scaler_knn.sav')
+scaler_path = os.path.join(base_dir, 'models', 'modelo_scaler.sav')
 modelo_path = os.path.join(base_dir, 'models', 'modelo_final_knn.sav')
 
 print("Base directory:", base_dir)
